@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SDGController;
+use App\Http\Controllers\FosilController;
+use App\Http\Controllers\BatuanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+// Sumber Daya Geologi
+Route::get('/SumberDayaGeologi', [SDGController::class, 'index']);
+
+// Batuan
+Route::get('/batuan', [BatuanController::class, 'index']);
+
+// Fosil
+Route::get('/fosil', [FosilController::class, 'index']);
