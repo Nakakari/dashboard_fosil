@@ -16,9 +16,7 @@ use App\Http\Controllers\BatuanController;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::get('/', [SDGController::class, 'dashboard']);
 
 // Sumber Daya Geologi
 Route::get('/SumberDayaGeologi', [SDGController::class, 'index']);

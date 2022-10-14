@@ -33,6 +33,12 @@
                     <li class="side-nav-title side-nav-item">Menu</li>
 
                     <li class="side-nav-item">
+                        <a href="{{ url('/') }}" class="side-nav-link">
+                            <i class="uil-coins"></i>
+                            <span> Dashboard </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
                         <a href="{{ url('/SumberDayaGeologi') }}" class="side-nav-link">
                             <i class="uil-coins"></i>
                             <span> Sumber Daya Geologi </span>
