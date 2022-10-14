@@ -84,19 +84,19 @@
 <!-- ============================================================== -->
 @section('js')
     <script type="text/javascript">
-        var pemanfaatan = <?php echo json_encode($pemanfaatan->pemanfaatan); ?>;
-        var bencana = <?php echo json_encode($bencana->bencana); ?>;
-        var undefine = <?php echo json_encode($undefine->undefine); ?>;
+        var pemanfaatan = <?php echo $pemanfaatan->pemanfaatan; ?>;
+        var bencana = <?php echo $bencana->bencana; ?>;
+        var undefine = <?php echo $undefine->undefine; ?>;
 
-        var mineral = <?php echo json_encode($mineral->mineral); ?>;
-        var beku = <?php echo json_encode($beku->beku); ?>;
-        var sedimen = <?php echo json_encode($sedimen->sedimen); ?>;
-        var metamorf = <?php echo json_encode($metamorf->metamorf); ?>;
-        var meteorit = <?php echo json_encode($meteorit->meteorit); ?>;
-        var impaktit = <?php echo json_encode($impaktit->impaktit); ?>;
-        var impaktit = <?php echo json_encode($impaktit->impaktit); ?>;
-        var piroklastik = <?php echo json_encode($piroklastik->piroklastik); ?>;
-        var undef = <?php echo json_encode($undef->undef); ?>;
+        var mineral = <?php echo $mineral->mineral; ?>;
+        var beku = <?php echo $beku->beku; ?>;
+        var sedimen = <?php echo $sedimen->sedimen; ?>;
+        var metamorf = <?php echo $metamorf->metamorf; ?>;
+        var meteorit = <?php echo $meteorit->meteorit; ?>;
+        var impaktit = <?php echo $impaktit->impaktit; ?>;
+        var impaktit = <?php echo $impaktit->impaktit; ?>;
+        var piroklastik = <?php echo $piroklastik->piroklastik; ?>;
+        var undef = <?php echo $undef->undef; ?>;
 
         var colors = ["#e3eaef", "#0acf97", "#727cf5"],
             dataColors = $("#simple-pie").data("colors");
