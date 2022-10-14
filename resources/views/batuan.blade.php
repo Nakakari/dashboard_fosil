@@ -1,138 +1,63 @@
-@include('layout.header')
+<script type="text/javascript">
+    var briteChartApp = window.briteChartApp || {};
+    ! function(i, e) {
+        "use strict";
+        var c = ["#e3eaef"];
+        e.createStepChart = function(e, t) {
+            var a = britecharts.step(),
+                l = britecharts.miniTooltip(),
+                n = d3.select(e),
+                u = !!n.node() && n.node().getBoundingClientRect().width;
+            a.width(u).height(320).margin({
+                    top: 40,
+                    right: 40,
+                    bottom: 80,
+                    left: 50
+                }).on("customMouseOver", l.show).on("customMouseMove", l.update).on("customMouseOut", l.hide), n
+                .datum(t).call(a), l.nameLabel("key"), d3.select(e + " .step-chart .metadata-group").datum([]).call(
+                    l)
+        }, i(function() {
+            var n = [{
+                key: "Mineral [BMI]",
+                value: mineral
+            }, {
+                key: "Beku [BBE]",
+                value: beku
+            }, {
+                key: "Sedimen [BSE]",
+                value: sedimen
+            }, {
+                key: "Metamorf [BME]",
+                value: metamorf
+            }, {
+                key: "Meteorit [BMT]",
+                value: meteorit
+            }, {
+                key: "Impaktit [BIM]",
+                value: impaktit
+            }, {
+                key: "Piroklastik [BPI]",
+                value: piroklastik
+            }, {
+                key: "Tidak Teridentifikasi",
+                value: undef
+            }];
 
-@include('layout.sidebar')
-
-<!-- ============================================================== -->
-<!-- Start Page Content here -->
-<!-- ============================================================== -->
-
-<div class="content-page">
-    <div class="content">
-        <!-- Topbar Start -->
-        @include('layout.topbar')
-        <!-- end Topbar -->
-
-        <!-- Start Content-->
-        <div class="container-fluid">
-
-            <!-- start page title -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="page-title-box">
-                        <div class="page-title-right">
-                            <form class="d-flex">
-                                <div class="input-group">
-                                    <input type="text" class="form-control form-control-light" id="dash-daterange">
-                                    <span class="input-group-text bg-success border-success text-white">
-                                        <i class="mdi mdi-calendar-range font-13"></i>
-                                    </span>
-                                </div>
-                                <a href="javascript: void(0);" class="btn btn-success ms-2">
-                                    <i class="mdi mdi-autorenew"></i>
-                                </a>
-                            </form>
-                        </div>
-                        <h4 class="page-title">Batuan</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- end page title -->
-
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 order-lg-2 order-xl-1">
-                    <div class="card">
-                        <div class="card-body">
-                            <a href="" class="btn btn-sm btn-link float-end">Export
-                                <i class="mdi mdi-download ms-1"></i>
-                            </a>
-                            <h4 class="header-title mt-2 mb-3">Tabel</h4>
-
-                            <div class="table-responsive">
-                                <table class="table table-centered mb-0">
-                                    <thead class="table-dark">
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Courier</th>
-                                            <th>Process</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>ASOS Ridley High Waist</td>
-                                            <td>FedEx</td>
-                                            <td>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar progress-lg bg-success" role="progressbar"
-                                                        style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                                        aria-valuemax="100">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><i class="mdi mdi-circle text-success"></i> Delivered</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marco Lightweight Shirt</td>
-                                            <td>DHL</td>
-                                            <td>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar progress-lg bg-warning" role="progressbar"
-                                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                        aria-valuemax="100">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><i class="mdi mdi-circle text-warning"></i> Shipped</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Half Sleeve Shirt</td>
-                                            <td>Bright</td>
-                                            <td>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar progress-lg bg-info" role="progressbar"
-                                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td><i class="mdi mdi-circle text-info"></i> Order Received</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lightweight Jacket</td>
-                                            <td>FedEx</td>
-                                            <td>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar progress-lg bg-success" role="progressbar"
-                                                        style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                                        aria-valuemax="100">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><i class="mdi mdi-circle text-success"></i> Delivered</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div> <!-- end table-responsive-->
-                        </div> <!-- end card-body-->
-                    </div> <!-- end card-->
-                </div> <!-- end col-->
-
-            </div>
-
-        </div>
-        <!-- container -->
-
-    </div>
-    <!-- content -->
-
-    <!-- Footer Start -->
-    @include('layout.footer')
-    <!-- end Footer -->
-
-</div>
-
-<!-- ============================================================== -->
-<!-- End Page content -->
-<!-- ============================================================== -->
-
-@include('layout.script')
+            function u() {
+                d3.selectAll(".bar-chart").remove(), d3.selectAll(".line-chart").remove(), d3.selectAll(
+                        ".donut-chart").remove(), d3.selectAll(".britechart-legend").remove(), d3.selectAll(
+                        ".brush-chart").remove(), d3.selectAll(".step-chart").remove(), 0 < i(".bar-container")
+                    .length && briteChartApp.createBarChart(".bar-container", e), 0 < i(
+                        ".bar-container-horizontal").length && briteChartApp.createHorizontalBarChart(
+                        ".bar-container-horizontal", e), 0 < i(".line-container").length && briteChartApp
+                    .createLineChart(".line-container", t), 0 < i(".donut-container").length && briteChartApp
+                    .createDonutChart(".donut-container", a), 0 < i(".brush-container").length && briteChartApp
+                    .createBrushChart(".brush-container", l), 0 < i(".step-container").length && briteChartApp
+                    .createStepChart(".step-container", n)
+            }
+            i(window).on("resize", function(e) {
+                e.preventDefault(), setTimeout(u, 200)
+            }), u()
+        })
+    }(jQuery, briteChartApp);
+</script>

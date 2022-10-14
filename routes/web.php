@@ -17,12 +17,3 @@ use App\Http\Controllers\BatuanController;
 */
 
 Route::get('/', [SDGController::class, 'dashboard']);
-
-// Sumber Daya Geologi
-Route::get('/SumberDayaGeologi', [SDGController::class, 'index']);
-
-// Batuan
-Route::get('/batuan', [BatuanController::class, 'index']);
-
-// Fosil
-Route::get('/fosil', [FosilController::class, 'index']);
