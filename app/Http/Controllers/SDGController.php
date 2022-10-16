@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Dashboard\M_dashboard;
+use App\Models\jenisFosil;
 use Illuminate\Http\Request;
+use App\Models\Dashboard\M_Fosil;
+use App\Models\Dashboard\M_dashboard;
 
 class SDGController extends Controller
 {
@@ -27,7 +28,10 @@ class SDGController extends Controller
             'piroklastik' => M_dashboard::getpiroklastik(),
             'undef' => M_dashboard::getundef(),
         ];
-        return view('dashboard', $data);
+        $fosil = [
+            'jenis' => jenisFosil::all()
+        ];
+        return view('dashboard', $data, $fosil);
         // dd($data['pemanfaatan']);
     }
 }

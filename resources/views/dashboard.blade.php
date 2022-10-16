@@ -69,7 +69,45 @@
                         </div> <!-- end col -->
                     </div>
 
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title"><i class="uil-search-alt me-1"></i>FOSIL</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
 
+                    <div class="row" id="fosil">
+                        @foreach ($jenis as $x)
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="text-center">
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb mb-0 p-2">
+                                                    <li class="breadcrumb-item"><i class="uil-search-alt me-1"></i>Fosil
+                                                    </li>
+                                                    <li class="breadcrumb-item" aria-current="page">
+                                                        {{ $x->jenis_koleksi }}
+                                                    </li>
+                                                </ol>
+                                            </nav>
+                                        </h5>
+                                        <div dir="ltr">
+                                            <div id="basic-bar-{{ $x->jenis_koleksi }}" class="apex-charts"
+                                                data-colors="#536de6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+                        @endforeach
+                    </div>
                 </div>
                 <!-- container -->
 
@@ -88,5 +126,10 @@
         @section('js')
             @include('sumber_daya')
             @include('batuan')
+
+            @foreach ($jenis as $x)
+                @include('fosil')
+            @endforeach
+            
         @stop
         @include('layout.script')

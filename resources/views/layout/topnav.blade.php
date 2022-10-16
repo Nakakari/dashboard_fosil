@@ -18,7 +18,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#fosil" id="topnav-dashboards"
                             role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="uil-search-alt"></i>Fosil
+                            <i class="uil-search-alt me-1"></i>Fosil
                         </a>
                     </li>
                 </ul>
