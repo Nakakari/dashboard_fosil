@@ -17,31 +17,14 @@
                 .datum(t).call(a), l.nameLabel("key"), d3.select(e + " .step-chart .metadata-group").datum([]).call(
                     l)
         }, i(function() {
-            var n = [{
-                key: "Mineral [BMI]",
-                value: mineral
-            }, {
-                key: "Beku [BBE]",
-                value: beku
-            }, {
-                key: "Sedimen [BSE]",
-                value: sedimen
-            }, {
-                key: "Metamorf [BME]",
-                value: metamorf
-            }, {
-                key: "Meteorit [BMT]",
-                value: meteorit
-            }, {
-                key: "Impaktit [BIM]",
-                value: impaktit
-            }, {
-                key: "Piroklastik [BPI]",
-                value: piroklastik
-            }, {
-                key: "Tidak Teridentifikasi",
-                value: undef
-            }];
+            var n = [
+                @foreach ($x->get_SubJenis as $isi)
+                    {
+                        key: '{{ $isi->sub_jenis_koleksi }}',
+                        value: '{{ count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi)) }}'
+                    },
+                @endforeach
+            ];
 
             function u() {
                 d3.selectAll(".bar-chart").remove(), d3.selectAll(".line-chart").remove(), d3.selectAll(
