@@ -32,8 +32,16 @@
                  height: 320,
                  type: "pie"
              },
-             series: [44, 55, 41, 17, 15],
-             labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
+             series: [
+                 @foreach ($x->get_SubJenis as $isi)
+                     {{ count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi)) }},
+                 @endforeach
+             ],
+             labels: [
+                 @foreach ($x->get_SubJenis as $isi)
+                     "{{ $isi->sub_jenis_koleksi }}",
+                 @endforeach
+             ],
              colors: colors,
              legend: {
                  show: !0,

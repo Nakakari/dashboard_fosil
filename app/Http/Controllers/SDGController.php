@@ -37,7 +37,5 @@ class SDGController extends Controller
         ];
 
         return view('dashboard', $data, $fosil);
-        // dd($data['jenissgd']);
-        // dd($fosil['jenis']->get_SubJenis);
     }
 }

@@ -100,22 +100,38 @@
                                                         <tr>
                                                             <td>No. Register</td>
                                                             <td>Pertama</td>
-                                                            <td>: AC336 508 2157</td>
+                                                            @if (empty($x->get_FirstFosil))
+                                                                <td>-</td>
+                                                            @else
+                                                                <td>: {{ $x->get_FirstFosil->no_reg }}</td>
+                                                            @endif
                                                         </tr>
                                                         <tr>
                                                             <td></td>
                                                             <td>Terakhir</td>
-                                                            <td>: AC336 508 2157</td>
+                                                            @if (empty($x->get_LastFosil))
+                                                                <td>-</td>
+                                                            @else
+                                                                <td>: {{ $x->get_LastFosil->no_reg }}</td>
+                                                            @endif
                                                         </tr>
                                                         <tr>
                                                             <td>No. Inventaris</td>
                                                             <td>Pertama</td>
-                                                            <td>: AC336 508 2157</td>
+                                                            @if (empty($x->get_FirstFosil))
+                                                                <td>-</td>
+                                                            @else
+                                                                <td>: {{ $x->get_FirstFosil->no_invent }}</td>
+                                                            @endif
                                                         </tr>
                                                         <tr>
                                                             <td></td>
                                                             <td>Terakhir</td>
-                                                            <td>: AC336 508 2157</td>
+                                                            @if (empty($x->get_LastFosil))
+                                                                <td>-</td>
+                                                            @else
+                                                                <td>: {{ $x->get_LastFosil->no_invent }}</td>
+                                                            @endif
                                                         </tr>
                                                     </tbody>
                                                 </table>
