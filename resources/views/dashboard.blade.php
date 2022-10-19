@@ -72,10 +72,10 @@
 
                     <div class="row" id="fosil">
                         @foreach ($jenis as $x)
-                            <div class="col-xl-6">
+                            <div class="col-xl-12">
                                 <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-center">
+                                    <div class="card-header p-0">
+                                        <h4 class="text-center">
                                             <nav aria-label="breadcrumb">
                                                 <ol class="breadcrumb mb-0 p-2">
                                                     <li class="breadcrumb-item"><i class="uil-search-alt me-1"></i>Fosil
@@ -85,12 +85,62 @@
                                                     </li>
                                                 </ol>
                                             </nav>
-                                        </h5>
-                                        <div dir="ltr">
-                                            <div id="simple-pie-{{ $x->jenis_koleksi }}" class="apex-charts"
-                                                data-colors="#39afd1,#ffbc00,#313a46,#ff5b5b,#10c469">
+                                        </h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div dir="ltr" class="mb-3 col-6">
+                                                <div id="simple-pie-{{ $x->jenis_koleksi }}" class="apex-charts"
+                                                    data-colors="#39afd1,#ffbc00,#313a46,#ff5b5b,#10c469">
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive-sm col-6 mt-5">
+                                                <table class="table table-striped table-centered mb-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>No. Register</td>
+                                                            <td>Pertama</td>
+                                                            <td>: AC336 508 2157</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Terakhir</td>
+                                                            <td>: AC336 508 2157</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. Inventaris</td>
+                                                            <td>Pertama</td>
+                                                            <td>: AC336 508 2157</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Terakhir</td>
+                                                            <td>: AC336 508 2157</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
+                                        <div class="my-3">
+                                            <h4>Jumlah Koleksi : </h4>
+                                        </div>
+                                        <table class="table table-centered mb-0">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    @foreach ($x->get_SubJenis as $isi)
+                                                        <th>{{ $isi->sub_jenis_koleksi }}</th>
+                                                    @endforeach
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    @foreach ($x->get_SubJenis as $isi)
+                                                        <td>{{ count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi)) }}
+                                                        </td>
+                                                    @endforeach
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <!-- end card body-->
                                 </div>
