@@ -87,8 +87,8 @@
                                             </nav>
                                         </h5>
                                         <div dir="ltr">
-                                            <div id="basic-bar-{{ $x->jenis_koleksi }}" class="apex-charts"
-                                                data-colors="#536de6">
+                                            <div id="simple-pie-{{ $x->jenis_koleksi }}" class="apex-charts"
+                                                data-colors="#39afd1,#ffbc00,#313a46,#ff5b5b,#10c469">
                                             </div>
                                         </div>
                                     </div>
