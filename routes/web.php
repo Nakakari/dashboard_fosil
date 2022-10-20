@@ -17,3 +17,5 @@ use App\Http\Controllers\BatuanController;
 */
 
 Route::get('/', [SDGController::class, 'dashboard']);
+Route::post('/sgd', [SDGController::class, 'sgd']);
+Route::post('/batuan', [SDGController::class, 'batuan']);

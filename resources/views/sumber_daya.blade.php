@@ -1,19 +1,54 @@
  <script type="text/javascript">
-     //  var pemanfaatan = <?php echo $pemanfaatan->pemanfaatan; ?>;
-     //  var bencana = <?php echo $bencana->bencana; ?>;
-     //  var undefine = <?php echo $undefine->undefine; ?>;
+     const table = $('#info_tabel_sgd').DataTable({
+         "bLengthChange": false,
+         "bFilter": false,
+         "bInfo": false,
+         "bPaginate": false,
+         "ajax": {
+             url: "{{ url('') }}/sgd",
+             type: "POST",
+             data: function(d) {
+                 d._token = "{{ csrf_token() }}",
+                     d.filter = $("#filter-jenis_koleksi").val()
+             },
+             success: function(response) {
+                 //  console.log(response['last'])
+                 $("#abc_sgd").empty();
+                 let rows = response["first"];
+                 let row = response["last"];
+                 let temp_html = ''
+                 if (rows === null && row == null) {
+                     temp_html = `
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+              `;
+                 } else {
+                     temp_html = `
+                    <tr>
+                        <td>${rows['no_reg']}</td>
+                        <td>${row['no_reg']}</td>
+                        <td>${rows['no_invent']}</td>
+                        <td>${row['no_invent']}</td>
+                    </tr>
+              `;
+                 }
 
-     //  var mineral = <?php echo $mineral->mineral; ?>;
-     //  var beku = <?php echo $beku->beku; ?>;
-     //  var sedimen = <?php echo $sedimen->sedimen; ?>;
-     //  var metamorf = <?php echo $metamorf->metamorf; ?>;
-     //  var meteorit = <?php echo $meteorit->meteorit; ?>;
-     //  var impaktit = <?php echo $impaktit->impaktit; ?>;
-     //  var impaktit = <?php echo $impaktit->impaktit; ?>;
-     //  var piroklastik = <?php echo $piroklastik->piroklastik; ?>;
-     //  var undef = <?php echo $undef->undef; ?>;
+                 $("#abc_sgd").append(temp_html);
+             },
+         }
 
-     var colors = ["#e3eaef", "#0acf97", "#727cf5"],
+
+     });
+
+     function filter() {
+         table.ajax.reload(null, false)
+     }
+
+     var colors = ["#727cf5", "#6c757d", "#0acf97", "#fa5c7c", "#e3eaef"],
          dataColors = $("#simple-pie").data("colors");
      dataColors && (colors = dataColors.split(","));
      var options = {
@@ -21,8 +56,16 @@
                  height: 366,
                  type: "pie"
              },
-             series: ['{{ count($y->get_SGD->where('jenis_koleksi', $y->jenis_koleksi)) }}'],
-             labels: ['{{ $y->jenis_koleksi }}'],
+             series: [
+                 @foreach ($jenissgd as $isi)
+                     {{ count($isi->get_SGD->where('jenis_koleksi', $isi->jenis_koleksi)) }},
+                 @endforeach
+             ],
+             labels: [
+                 @foreach ($jenissgd as $isi)
+                     "{{ $isi->jenis_koleksi }} [{{ $isi->kode_jenis_koleksi }}]",
+                 @endforeach
+             ],
              colors: colors,
              legend: {
                  show: !0,

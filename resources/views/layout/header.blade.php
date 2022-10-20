@@ -14,7 +14,7 @@
     <link href="{{ asset('template') }}/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet"
         type="text/css" />
     <!-- third party css end -->
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
     <!-- App css -->
     <link href="{{ asset('template') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ asset('template') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
