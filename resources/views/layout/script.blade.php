@@ -25,6 +25,11 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
 @yield('js')
+<script type="text/javascript">
+    function login() {
+        window.location.href = "https://anggrek75.my.id/mgb2/login"
+    }
+</script>
 </body>
 
 </html>
