@@ -106,7 +106,6 @@
                                             </tfoot>
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -184,7 +183,7 @@
 
 
                     <!-- start page title -->
-                    <div class="row">
+                    <div class="row" id="fosil">
                         <div class="col-12">
                             <div class="page-title-box">
                                 <h4 class="page-title"><i class="uil-search-alt me-1"></i>FOSIL</h4>
@@ -193,7 +192,7 @@
                     </div>
                     <!-- end page title -->
 
-                    <div class="row" id="fosil">
+                    <div class="row">
                         @foreach ($jenis as $x)
                             <div class="col-xl-12">
                                 <div class="card">
@@ -215,7 +214,7 @@
                                         <div class="row">
                                             <div dir="ltr" class="mb-3 col-6">
                                                 <div id="simple-pie-{{ $x->jenis_koleksi }}" class="apex-charts"
-                                                    data-colors="#39afd1,#ffbc00,#313a46,#ff5b5b,#10c469">
+                                                    data-colors="#F44336,#E91E63,#9C27B0,#5C6BC0,#03A9F4,#009688,#8BC34A,#FFEB3B,#FF5722,#795548,#9E9E9E,#263238">
                                                 </div>
                                             </div>
                                             <div class="mb-3 col-6 mt-5">

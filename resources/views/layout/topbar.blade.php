@@ -2,12 +2,12 @@
     <div class="container-fluid">
 
         <!-- LOGO -->
-        <a href="" class="topnav-logo">
+        <a href="" class="topnav-logo mt-2">
             <span class="topnav-logo-lg">
-                <img src="{{ asset('template') }}/assets/images/logo-light.png" alt="" height="16">
+                <h3>Museum Geologi Bandung (MGB)</h3>
             </span>
             <span class="topnav-logo-sm">
-                <img src="{{ asset('template') }}/assets/images/logo_sm_dark.png" alt="" height="16">
+                <h3>Museum Geologi Bandung (MGB)</h3>
             </span>
         </a>
 
