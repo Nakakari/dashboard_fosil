@@ -47,18 +47,25 @@
                         <div class="col-xl-7 col-lg-6" id="tabelsgd">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="dropdown float-start mb-2">
-                                        <h4 class="header-title">Sumber Daya Geologi</h4>
-                                    </div>
-                                    <div class="dropdown float-end mb-2">
-                                        <select class="form-select filter" id="filter-jenis_koleksi"
-                                            onchange="filter()">
-                                            <option selected value="null">Pilih Jenis Koleksi</option>
-                                            @foreach ($macamsgd as $abc)
-                                                <option value="{{ $abc->id_ref_04_admin_jenis_koleksi }}">
-                                                    {{ $abc->jenis_koleksi }} [{{ $abc->kode_jenis_koleksi }}]</option>
-                                            @endforeach
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="dropdown float-start mb-2">
+                                                <h4 class="header-title">Sumber Daya Geologi</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="dropdown float-end mb-2">
+                                                <select class="form-select filter" id="filter-jenis_koleksi"
+                                                    onchange="filter()">
+                                                    <option selected value="null">Pilih Jenis Koleksi</option>
+                                                    @foreach ($macamsgd as $abc)
+                                                        <option value="{{ $abc->id_ref_04_admin_jenis_koleksi }}">
+                                                            {{ $abc->jenis_koleksi }} [{{ $abc->kode_jenis_koleksi }}]
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="table-responsive-sm mt-3">
                                         <table class="table table-striped text-center" id="info_tabel_sgd">
@@ -101,18 +108,25 @@
                         <div class="col-xl-7 col-lg-6" id="tabelsgd">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="dropdown float-start mb-2">
-                                        <h4 class="header-title">Batuan</h4>
-                                    </div>
-                                    <div class="dropdown float-end mb-2">
-                                        <select class="form-select filter" id="filter-jenis_koleksiBt"
-                                            onchange="filterBt()">
-                                            <option selected value="null">Pilih Jenis Koleksi</option>
-                                            @foreach ($jenisBatuan as $bt)
-                                                <option value="{{ $bt->id_ref_04_admin_jenis_koleksi }}">
-                                                    {{ $bt->jenis_koleksi }} [{{ $bt->kode_jenis_koleksi }}]</option>
-                                            @endforeach
-                                        </select>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="dropdown float-start mb-2">
+                                                <h4 class="header-title">Batuan</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="dropdown float-end mb-2">
+                                                <select class="form-select filter" id="filter-jenis_koleksiBt"
+                                                    onchange="filterBt()">
+                                                    <option selected value="null">Pilih Jenis Koleksi</option>
+                                                    @foreach ($jenisBatuan as $bt)
+                                                        <option value="{{ $bt->id_ref_04_admin_jenis_koleksi }}">
+                                                            {{ $bt->jenis_koleksi }} [{{ $bt->kode_jenis_koleksi }}]
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="table-responsive-sm mt-3">
                                         <table class="table table-striped text-center" id="info_tabel_batuan">
@@ -175,69 +189,73 @@
                                                     data-colors="#39afd1,#ffbc00,#313a46,#ff5b5b,#10c469">
                                                 </div>
                                             </div>
-                                            <div class="table-responsive-sm col-6 mt-5">
-                                                <table class="table table-striped table-centered mb-0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>No. Register</td>
-                                                            <td>Pertama</td>
-                                                            @if (empty($x->get_FirstFosil))
-                                                                <td>-</td>
-                                                            @else
-                                                                <td>: {{ $x->get_FirstFosil->no_reg }}</td>
-                                                            @endif
-                                                        </tr>
-                                                        <tr>
-                                                            <td></td>
-                                                            <td>Terakhir</td>
-                                                            @if (empty($x->get_LastFosil))
-                                                                <td>-</td>
-                                                            @else
-                                                                <td>: {{ $x->get_LastFosil->no_reg }}</td>
-                                                            @endif
-                                                        </tr>
-                                                        <tr>
-                                                            <td>No. Inventaris</td>
-                                                            <td>Pertama</td>
-                                                            @if (empty($x->get_FirstFosil))
-                                                                <td>-</td>
-                                                            @else
-                                                                <td>: {{ $x->get_FirstFosil->no_invent }}</td>
-                                                            @endif
-                                                        </tr>
-                                                        <tr>
-                                                            <td></td>
-                                                            <td>Terakhir</td>
-                                                            @if (empty($x->get_LastFosil))
-                                                                <td>-</td>
-                                                            @else
-                                                                <td>: {{ $x->get_LastFosil->no_invent }}</td>
-                                                            @endif
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                            <div class="mb-3 col-6 mt-5">
+                                                <div class="table-responsive-sm">
+                                                    <table class="table table-striped table-centered mb-0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>No. Register</td>
+                                                                <td>Pertama</td>
+                                                                @if (empty($x->get_FirstFosil))
+                                                                    <td>-</td>
+                                                                @else
+                                                                    <td>: {{ $x->get_FirstFosil->no_reg }}</td>
+                                                                @endif
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>Terakhir</td>
+                                                                @if (empty($x->get_LastFosil))
+                                                                    <td>-</td>
+                                                                @else
+                                                                    <td>: {{ $x->get_LastFosil->no_reg }}</td>
+                                                                @endif
+                                                            </tr>
+                                                            <tr>
+                                                                <td>No. Inventaris</td>
+                                                                <td>Pertama</td>
+                                                                @if (empty($x->get_FirstFosil))
+                                                                    <td>-</td>
+                                                                @else
+                                                                    <td>: {{ $x->get_FirstFosil->no_invent }}</td>
+                                                                @endif
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>Terakhir</td>
+                                                                @if (empty($x->get_LastFosil))
+                                                                    <td>-</td>
+                                                                @else
+                                                                    <td>: {{ $x->get_LastFosil->no_invent }}</td>
+                                                                @endif
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="my-3">
                                             <h4>Jumlah Koleksi : </h4>
                                         </div>
-                                        <table class="table table-centered mb-0">
-                                            <thead class="table-dark">
-                                                <tr>
-                                                    @foreach ($x->get_SubJenis as $isi)
-                                                        <th>{{ $isi->sub_jenis_koleksi }}</th>
-                                                    @endforeach
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    @foreach ($x->get_SubJenis as $isi)
-                                                        <td>{{ count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi)) }}
-                                                        </td>
-                                                    @endforeach
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="table-responsive-sm col-12">
+                                            <table class="table table-centered mb-0">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        @foreach ($x->get_SubJenis as $isi)
+                                                            <th>{{ $isi->sub_jenis_koleksi }}</th>
+                                                        @endforeach
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        @foreach ($x->get_SubJenis as $isi)
+                                                            <td>{{ count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi)) }}
+                                                            </td>
+                                                        @endforeach
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                     <!-- end card body-->
                                 </div>
