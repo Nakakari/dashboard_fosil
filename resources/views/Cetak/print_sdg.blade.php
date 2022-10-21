@@ -21,7 +21,7 @@
 
                     <!-- start page title -->
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 mb-2">
                             <div class="page-title-box">
                                 <ol class="breadcrumb m-2">
                                     <li class="breadcrumb-item"><a href="/">
