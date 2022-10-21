@@ -24,5 +24,5 @@
     <link href="{{ asset('template') }}/assets/css/app-modern-dark.min.css" rel="stylesheet" type="text/css"
         id="dark-style" />
     <link href="{{ asset('template') }}/assets/css/vendor/britecharts.min.css" rel="stylesheet" type="text/css" />
-
+    @yield('css')
 </head>

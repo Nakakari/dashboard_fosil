@@ -54,7 +54,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <!-- item-->
-                                            <a href="/print_sgd" class="dropdown-item">Print</a>
+                                            <a href="/print_sdg" class="dropdown-item">Print</a>
                                             <!-- item-->
                                         </div>
                                     </div>
@@ -300,7 +300,7 @@
         </div>
     </div>
     <!-- content -->
-
+    @yield('modal')
     <!-- Footer Start -->
     @include('layout.footer')
     <!-- end Footer -->

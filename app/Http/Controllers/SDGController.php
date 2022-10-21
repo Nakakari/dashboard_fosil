@@ -76,4 +76,20 @@ class SDGController extends Controller
         $count = $count->get();
         return response()->json(['first' => $first, 'last' => $last, 'count' => $count]);
     }
+
+    public function printsdg()
+    {
+        $data = [
+            'jenissgd' => ModelsJenisSDG::all(),
+            'macamsgd' => jenisSDG::all(),
+            'jenisBatuan' => jenisBatuan::all(),
+            'getCountSGD' => M_sdg::countData(),
+            'getCountBt' => M_batuan::countData()
+        ];
+        $fosil = [
+            'jenis' => jenisFosil::all()
+        ];
+
+        return view('Cetak.print_sdg', $data, $fosil);
+    }
 }

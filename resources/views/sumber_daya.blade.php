@@ -94,13 +94,14 @@
      chart.render();
 
      function printSdg() {
-         var divContents = document.getElementById("info_tabel_sgd").innerHTML;
-         var a = window.open('', '', '');
-         a.document.write('<html>');
-         a.document.write('<body>');
-         a.document.write(divContents);
-         a.document.write('</body></html>');
-         a.document.close();
-         a.print();
+         //  var divContents = document.getElementById("info_tabel_sgd").innerHTML;
+         //  var a = window.open('', '', '');
+         //  a.document.write('<html>');
+         //  a.document.write('<body>');
+         //  a.document.write(divContents);
+         //  a.document.write('</body></html>');
+         //  a.document.close();
+         //  a.print();
+         $('#all_print_sgd')[0].contentWindow.print();
      }
  </script>
