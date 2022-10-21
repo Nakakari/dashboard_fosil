@@ -31,7 +31,7 @@
                     </div>
                     <!-- end page title -->
 
-                    <div class="row">
+                    <div class="row" id="all_print_sgd">
                         <div class="col-xl-5 col-lg-6" id="sgd">
                             <div class="card">
                                 <div class="card-body">
@@ -47,6 +47,17 @@
                         <div class="col-xl-7 col-lg-6" id="tabelsgd">
                             <div class="card">
                                 <div class="card-body">
+                                    <div class="dropdown float-end">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <!-- item-->
+                                            <a href="/print_sgd" class="dropdown-item">Print</a>
+                                            <!-- item-->
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="dropdown float-start mb-2">
@@ -82,10 +93,18 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="abc_sgd">
-
                                             </tbody>
+                                            <tfoot class="table-light">
+                                                <tr>
+                                                    <th colspan="2" class="text-end">Jumlah Koleksi :</th>
+                                                    <th colspan="2" id="jml_koleksi_sgd">-</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2" class="text-end">Dari Total :</th>
+                                                    <th colspan="2">{{ $getCountSGD->jml }}</th>
+                                                </tr>
+                                            </tfoot>
                                         </table>
-
                                     </div>
 
                                 </div>
@@ -143,8 +162,17 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="abc_batuan">
-
                                             </tbody>
+                                            <tfoot class="table-light">
+                                                <tr>
+                                                    <th colspan="2" class="text-end">Jumlah Koleksi :</th>
+                                                    <th colspan="2" id="jml_koleksi_bt">--</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2" class="text-end">Dari Total :</th>
+                                                    <th colspan="2">{{ $getCountBt->jml }}</th>
+                                                </tr>
+                                            </tfoot>
                                         </table>
 
                                     </div>
@@ -173,7 +201,8 @@
                                         <h4 class="text-center">
                                             <nav aria-label="breadcrumb">
                                                 <ol class="breadcrumb mb-0 p-2">
-                                                    <li class="breadcrumb-item"><i class="uil-search-alt me-1"></i>Fosil
+                                                    <li class="breadcrumb-item"><i
+                                                            class="uil-search-alt me-1"></i>Fosil
                                                     </li>
                                                     <li class="breadcrumb-item" aria-current="page">
                                                         {{ $x->jenis_koleksi }}
@@ -282,6 +311,11 @@
 <!-- End Page content -->
 <!-- ============================================================== -->
 @section('js')
+    <script type="text/javascript">
+        // $(document).ready(function() {
+        //     window.print()
+        // });
+    </script>
 
     @include('sumber_daya')
 

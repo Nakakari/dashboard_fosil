@@ -22,4 +22,11 @@ class M_sdg extends Model
             ->where('ref_041_admin_jenis_koleksi_sdg.id_ref_04_admin_jenis_koleksi', $filter)
             ->get();
     }
+
+    public static function countData()
+    {
+        return DB::table('01_sumber_daya_geologi')
+            ->select(DB::raw('count(*) as jml'))
+            ->first();
+    }
 }

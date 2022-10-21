@@ -12,7 +12,7 @@
                     d.filter = $("#filter-jenis_koleksiBt").val()
             },
             success: function(response) {
-                //  console.log(response['last'])
+                var count = response['count'].length;
                 $("#abc_batuan").empty();
                 let rows = response["first"];
                 let row = response["last"];
@@ -36,7 +36,7 @@
                     </tr>
               `;
                 }
-
+                $('#jml_koleksi_bt').html(count);
                 $("#abc_batuan").append(temp_html);
             },
         }

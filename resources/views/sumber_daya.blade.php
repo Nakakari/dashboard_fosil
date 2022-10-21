@@ -12,7 +12,7 @@
                      d.filter = $("#filter-jenis_koleksi").val()
              },
              success: function(response) {
-                 //  console.log(response['last'])
+                 var count = response['count'].length;
                  $("#abc_sgd").empty();
                  let rows = response["first"];
                  let row = response["last"];
@@ -37,6 +37,7 @@
               `;
                  }
 
+                 $('#jml_koleksi_sgd').html(count);
                  $("#abc_sgd").append(temp_html);
              },
          }
@@ -91,4 +92,15 @@
          },
          chart = new ApexCharts(document.querySelector("#simple-pie"), options);
      chart.render();
+
+     function printSdg() {
+         var divContents = document.getElementById("info_tabel_sgd").innerHTML;
+         var a = window.open('', '', '');
+         a.document.write('<html>');
+         a.document.write('<body>');
+         a.document.write(divContents);
+         a.document.write('</body></html>');
+         a.document.close();
+         a.print();
+     }
  </script>
