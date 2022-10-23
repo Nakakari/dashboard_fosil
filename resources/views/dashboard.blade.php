@@ -47,17 +47,6 @@
                         <div class="col-xl-7 col-lg-6" id="tabelsgd">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="dropdown float-end">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="mdi mdi-dots-horizontal"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- item-->
-                                            <a href="/print_sdg" class="dropdown-item">Print</a>
-                                            <!-- item-->
-                                        </div>
-                                    </div>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="dropdown float-start mb-2">

@@ -16,9 +16,8 @@
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown"
                     id="topbar-userdrop" role="button" aria-haspopup="true" aria-expanded="false">
-                    <button type="button" class="btn btn-outline-primary" onclick="login()"> <i
-                            class="dripicons-enter"></i>
-                        Login</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="login()">
+                        LOGIN</button>
                 </a>
 
             </li>

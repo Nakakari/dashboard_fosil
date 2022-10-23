@@ -92,4 +92,13 @@ class SDGController extends Controller
 
         return view('Cetak.print_sdg', $data, $fosil);
     }
+
+    public function printbatuan()
+    {
+        $data = [
+            'jenisBatuan' => jenisBatuan::all(),
+            'getCountBt' => M_batuan::countData()
+        ];
+        return view('Cetak.print_batuan', $data);
+    }
 }

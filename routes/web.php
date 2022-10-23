@@ -22,3 +22,4 @@ Route::post('/batuan', [SDGController::class, 'batuan']);
 
 // Print
 Route::get('/print_sdg', [SDGController::class, 'printsdg']);
+Route::get('/print_batuan', [SDGController::class, 'printbatuan']);
