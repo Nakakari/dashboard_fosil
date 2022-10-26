@@ -31,8 +31,8 @@
                     </div>
                     <!-- end page title -->
 
-                    <div class="row" id="all_print_sgd">
-                        <div class="col-xl-5 col-lg-6" id="sgd">
+                    <div id="sgd" class="row" id="all_print_sgd">
+                        <div class="col-xl-5 col-lg-6">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="header-title">Sumber Daya Geologi</h4>
@@ -101,8 +101,8 @@
 
                     </div>
 
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-6" id="batuan">
+                    <div id="batuan" class="row">
+                        <div class="col-xl-5 col-lg-6">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="header-title">Batuan</h4>
@@ -169,7 +169,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <!-- start page title -->
                     <div class="row" id="fosil">
