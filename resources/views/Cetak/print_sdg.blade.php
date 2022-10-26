@@ -21,24 +21,18 @@
 
                     <!-- start page title -->
                     <div class="row">
-                        <div class="col-12 mb-2">
+                        <div class="col-6 mb-2 mt-1">
                             <div class="page-title-box">
-                                <ol class="breadcrumb m-2">
-                                    <li class="breadcrumb-item"><a href="/">
-                                            DASHBOARD
-                                        </a></li>
-                                    <li class="breadcrumb-item active">
-                                        CETAK SDG
-                                    </li>
-                                </ol>
-                                <div class="float-end">
-                                    <!-- item-->
-                                    <a href="javascript:window.print()" class="btn btn-primary"><i
-                                            class="mdi mdi-printer"></i> Print</a>
-                                    <!-- item-->
-                                </div>
+                                <h4 class="page-title"><i class="uil-coins me-1"></i>SUMBER DAYA GEOLOGI</h4>
                             </div>
-
+                        </div>
+                        <div class="col-6 mb-2 mt-3">
+                            <div class="float-end">
+                                <!-- item-->
+                                <a href="javascript:window.print()" class="btn btn-primary"><i
+                                        class="mdi mdi-printer"></i> Print</a>
+                                <!-- item-->
+                            </div>
                         </div>
                     </div>
                     <!-- end page title -->
@@ -47,7 +41,7 @@
                         <div class="col-xl-5 col-lg-6" id="sgd">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="header-title">Sumber Daya Geologi</h4>
+                                    <h4 class="header-title">Diagram Sumber Daya Geologi</h4>
                                     <div dir="ltr">
                                         <div id="simple-pie" class="apex-charts"></div>
                                     </div>
@@ -59,11 +53,10 @@
                         <div class="col-xl-7 col-lg-6" id="tabelsgd">
                             <div class="card">
                                 <div class="card-body">
-
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="dropdown float-start mb-2">
-                                                <h4 class="header-title">Sumber Daya Geologi</h4>
+                                                <h4 class="header-title">Tabel Sumber Daya Geologi</h4>
                                             </div>
                                         </div>
                                         <div class="col-6">

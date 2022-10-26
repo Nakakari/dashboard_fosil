@@ -24,7 +24,7 @@
                         <div class="col-12">
                             <div class="page-title-box">
 
-                                <h4 class="page-title">DASHBOARD</h4>
+                                <h4 class="page-title"><i class="uil-coins me-1"></i>SUMBER DAYA GEOLOGI</h4>
 
                             </div>
                         </div>
@@ -100,6 +100,18 @@
                         </div>
 
                     </div>
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+
+                                <h4 class="page-title"><i class="uil-sport me-1"></i>BATUAN</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
 
                     <div id="batuan" class="row">
                         <div class="col-xl-5 col-lg-6">
@@ -205,7 +217,10 @@
                                                     data-colors="#F44336,#E91E63,#9C27B0,#5C6BC0,#03A9F4,#009688,#8BC34A,#FFEB3B,#FF5722,#795548,#9E9E9E,#263238">
                                                 </div>
                                             </div>
-                                            <div class="mb-3 col-6 mt-5">
+                                            <div class="mb-3 col-6">
+                                                <div class="mb-3">
+                                                    <h4>Jumlah Koleksi : </h4>
+                                                </div>
                                                 <div class="table-responsive-sm">
                                                     <table class="table table-striped table-centered mb-0">
                                                         <tbody>
@@ -250,9 +265,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="my-3">
-                                            <h4>Jumlah Koleksi : </h4>
-                                        </div>
+
                                         <div class="table-responsive-sm col-12">
                                             <table class="table table-centered mb-0">
                                                 <thead class="table-dark">
