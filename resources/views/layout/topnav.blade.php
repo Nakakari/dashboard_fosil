@@ -25,8 +25,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#fosil" id="topnav-dashboards"
-                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" href="/cetak_barcode" id="topnav-dashboards">
                             <i class="uil-search-alt me-1"></i>Cetak Barcode
                         </a>
                     </li>

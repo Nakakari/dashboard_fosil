@@ -32,8 +32,8 @@
                                 </ol>
                                 <div class="float-end">
                                     <!-- item-->
-                                    <a href="javascript:window.print()" class="btn btn-primary"><i
-                                            class="mdi mdi-printer"></i> Print</a>
+                                    <button href="javascript:window.print()" class="btn btn-primary" id="print"
+                                        disabled><i class="mdi mdi-printer"></i> Print</button>
                                     <!-- item-->
                                 </div>
                             </div>

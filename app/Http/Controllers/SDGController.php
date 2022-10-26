@@ -11,6 +11,7 @@ use App\Models\Dashboard\M_dashboard;
 use App\Models\Dashboard\M_sdg;
 use App\Models\jenisBatuan;
 use App\Models\jenisSDG as ModelsJenisSDG;
+use App\Models\M_koleksi;
 use Illuminate\Support\Facades\DB;
 
 class SDGController extends Controller
@@ -100,5 +101,14 @@ class SDGController extends Controller
             'getCountBt' => M_batuan::countData()
         ];
         return view('Cetak.print_batuan', $data);
+    }
+
+    public function barcode()
+    {
+        $data = [
+            'koleksi' => M_koleksi::all(),
+        ];
+        return view('Cetak.v_barcode', $data);
+        // dd($data['koleksi']);
     }
 }

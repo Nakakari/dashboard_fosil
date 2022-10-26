@@ -21,7 +21,12 @@
 {{-- <script src="{{ asset('template') }}/assets/js/pages/demo.apex-pie.js"></script> --}}
 <!-- demo end -->
 
-
+<!-- Datatables js -->
+<script src="{{ asset('template') }}/assets/js/vendor/dataTables.buttons.min.js"></script>
+<script src="{{ asset('template') }}/assets/js/vendor/buttons.bootstrap5.min.js"></script>
+<script src="{{ asset('template') }}/assets/js/vendor/buttons.html5.min.js"></script>
+<script src="{{ asset('template') }}/assets/js/vendor/buttons.flash.min.js"></script>
+<script src="{{ asset('template') }}/assets/js/vendor/buttons.print.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
 @yield('js')
