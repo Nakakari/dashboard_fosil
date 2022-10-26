@@ -46,14 +46,7 @@
     function filterBt() {
         tablebt.ajax.reload(null, false)
         // console.log($("#filter-jenis_koleksiBt").val())
-        var nilai = $("#filter-jenis_koleksiBt").val()
-        if (!nilai) {
-            console.log(nilai)
-            $("#print").prop("disabled", true);
-        } else {
-            $("#print").prop("disabled", false);
-            console.log(nilai)
-        }
+
 
     }
     var colors = ["#b0bf1a", "#6c757d", "#0acf97", "#fa5c7c", "#e3eaef", "#d3b393", "#ffbf00", "#9966cc"],

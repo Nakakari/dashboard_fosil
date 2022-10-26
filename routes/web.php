@@ -19,6 +19,7 @@ use App\Http\Controllers\BatuanController;
 Route::get('/', [SDGController::class, 'dashboard']);
 Route::post('/sgd', [SDGController::class, 'sgd']);
 Route::post('/batuan', [SDGController::class, 'batuan']);
+Route::post('/fosil', [SDGController::class, 'fosil']);
 
 // Print
 Route::get('/print_sdg', [SDGController::class, 'printsdg']);
@@ -26,3 +27,4 @@ Route::get('/print_batuan', [SDGController::class, 'printbatuan']);
 
 //Cetak Barcode
 // Route::get('/cetak_barcode', [SDGController::class, 'barcode']);
+Route::get('/print_fosil', [SDGController::class, 'printfosil']);

@@ -35,12 +35,10 @@ class SDGController extends Controller
         ];
 
         return view('dashboard', $data, $fosil);
-        // dd($data['getCountSGD']);
     }
 
     public function sgd()
     {
-        // dd(request()->filter);
         $data = M_sdg::select(['*'])
             ->join('ref_041_admin_jenis_koleksi_sdg', 'ref_041_admin_jenis_koleksi_sdg.jenis_koleksi', '=', '01_sumber_daya_geologi.jenis_koleksi');
         $data2 = M_sdg::select(['*'])
@@ -56,11 +54,11 @@ class SDGController extends Controller
         $last = $data2->orderBy('no_reg', 'desc')->first();
         $count = $count->get();
         return response()->json(['first' => $first, 'last' => $last, 'count' => $count]);
+        return view('sumber_daya');
     }
 
     public function batuan()
     {
-        // dd(request()->filter);
         $data = M_batuan::select(['*'])
             ->join('ref_042_admin_jenis_koleksi_batuan', 'ref_042_admin_jenis_koleksi_batuan.jenis_koleksi', '=', '02_batuan.jenis_koleksi');
         $data2 = M_batuan::select(['*'])
@@ -110,5 +108,19 @@ class SDGController extends Controller
         ];
         return view('Cetak.v_barcode', $data);
         // dd($data['koleksi']);
+    }
+    public function printfosil()
+    {
+        $data = [
+            'jenissgd' => ModelsJenisSDG::all(),
+            'macamsgd' => jenisSDG::all(),
+            'jenisBatuan' => jenisBatuan::all(),
+            'getCountSGD' => M_sdg::countData(),
+            'getCountBt' => M_batuan::countData()
+        ];
+        $fosil = [
+            'jenis' => jenisFosil::all()
+        ];
+        return view('Cetak.print_fosil', $data, $fosil);
     }
 }
