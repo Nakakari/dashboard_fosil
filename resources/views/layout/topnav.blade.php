@@ -23,11 +23,7 @@
                             <i class="uil-search-alt me-1"></i>Fosil
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="/cetak_barcode" id="topnav-dashboards">
-                            <i class="uil-search-alt me-1"></i>Cetak Barcode
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </nav>
