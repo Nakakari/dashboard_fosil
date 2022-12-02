@@ -28,7 +28,8 @@ class SDGController extends Controller
             'macamsgd' => jenisSDG::all(),
             'jenisBatuan' => jenisBatuan::all(),
             'getCountSGD' => M_sdg::countData(),
-            'getCountBt' => M_batuan::countData()
+            'getCountBt' => M_batuan::countData(),
+            'getCountFosil' => M_Fosil::countData(),
         ];
         $fosil = [
             'jenis' => jenisFosil::all()

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models\Dashboard;
+
 use App\Models\jenisFosil;
 use App\Models\subJenisFosil;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,4 +15,10 @@ class M_Fosil extends Model
     public $keyType = 'string';
     protected $table = '03_fosil';
     protected $guarded = [];
+    public static function countData()
+    {
+        return DB::table('03_fosil')
+            ->select(DB::raw('count(*) as jml'))
+            ->first();
+    }
 }

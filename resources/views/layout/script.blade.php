@@ -32,7 +32,7 @@
 @yield('js')
 <script type="text/javascript">
     function login() {
-        window.location.href = "https://anggrek75.my.id/mgb2/login"
+        window.location.href = "https://anggrek75.my.id/mgb/login"
     }
 </script>
 </body>

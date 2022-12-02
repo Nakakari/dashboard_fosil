@@ -24,6 +24,63 @@
                         <div class="col-12">
                             <div class="page-title-box">
 
+                                <h4 class="page-title"><i class=" uil-chart-bar me-1"></i>TOTAL</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="col-xl-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="dropdown float-start mb-2">
+                                            <h4 class="header-title">Kumulatif Data</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="table-responsive-sm mt-3">
+                                    <table class="table text-center">
+                                        <tbody>
+                                            <tr class="bg-light text-secondary">
+                                                <th width="30%">Jenis</th>
+                                                <th width="70%">Total</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="30%">Sumber Daya Geologi</th>
+                                                <th width="70%">{{ $getCountSGD->jml }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="30%">Batuan</th>
+                                                <th width="70%">{{ $getCountBt->jml }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="30%">Fosil</th>
+                                                <th width="70%">{{ $getCountFosil->jml }}</th>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot class="bg-light text-secondary">
+                                            <tr>
+                                                <th class="text-end" width="30%"></th>
+                                                <th width="70%">
+                                                    {{ $getCountSGD->jml + $getCountBt->jml + $getCountFosil->jml }}</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+
                                 <h4 class="page-title"><i class="uil-coins me-1"></i>SUMBER DAYA GEOLOGI</h4>
 
                             </div>
