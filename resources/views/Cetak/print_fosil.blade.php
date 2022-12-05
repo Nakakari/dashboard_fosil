@@ -63,7 +63,16 @@
                                             </div>
                                             <div class="mb-3 col-6">
                                                 <div class="mb-3">
-                                                    <h4>Jumlah Koleksi : </h4>
+                                                    <?php
+                                                    $total = 0;
+                                                    $sub_total = 0;
+                                                    foreach ($x->get_SubJenis as $isi) {
+                                                        $sub_total = count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi));
+                                                        $total += $sub_total;
+                                                    }
+                                                    ?>
+                                                    <h4>Jumlah Koleksi : {{ $total }}
+                                                    </h4>
                                                 </div>
                                                 <div class="table-responsive-sm">
                                                     <table class="table table-striped table-centered mb-0">
