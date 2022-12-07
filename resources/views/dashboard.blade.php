@@ -42,36 +42,45 @@
                                     </div>
 
                                 </div>
-                                <div class="table-responsive-sm mt-3">
-                                    <table class="table text-center">
-                                        <tbody>
-                                            <tr class="bg-light text-secondary">
-                                                <th width="30%">Jenis</th>
-                                                <th width="70%">Total</th>
-                                            </tr>
-                                            <tr>
-                                                <th width="30%">Sumber Daya Geologi</th>
-                                                <th width="70%">{{ $getCountSGD->jml }}</th>
-                                            </tr>
-                                            <tr>
-                                                <th width="30%">Batuan</th>
-                                                <th width="70%">{{ $getCountBt->jml }}</th>
-                                            </tr>
-                                            <tr>
-                                                <th width="30%">Fosil</th>
-                                                <th width="70%">{{ $getCountFosil->jml }}</th>
-                                            </tr>
+                                <div class="row">
+                                    <div dir="ltr" class="mb-3 col-6">
+                                        <div id="akumulatif" class="apex-charts"
+                                            data-colors="#F44336,#E91E63,#9C27B0,#5C6BC0,#03A9F4,#009688,#8BC34A,#FFEB3B,#FF5722,#795548,#9E9E9E,#263238">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="table-responsive-sm mt-3">
+                                            <table class="table text-center">
+                                                <tbody>
+                                                    <tr class="bg-light text-secondary">
+                                                        <th width="30%">Jenis</th>
+                                                        <th width="70%">Total</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th width="30%">Sumber Daya Geologi</th>
+                                                        <th width="70%">{{ $getCountSGD->jml }}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th width="30%">Batuan</th>
+                                                        <th width="70%">{{ $getCountBt->jml }}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th width="30%">Fosil</th>
+                                                        <th width="70%">{{ $getCountFosil->jml }}</th>
+                                                    </tr>
 
-                                        </tbody>
-                                        <tfoot class="bg-light text-secondary">
-                                            <tr>
-                                                <th class="text-end" width="30%"></th>
-                                                <th width="70%">
-                                                    {{ $getCountSGD->jml + $getCountBt->jml + $getCountFosil->jml }}
-                                                </th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                                </tbody>
+                                                <tfoot class="bg-light text-secondary">
+                                                    <tr>
+                                                        <th class="text-end" width="30%"></th>
+                                                        <th width="70%">
+                                                            {{ $getCountSGD->jml + $getCountBt->jml + $getCountFosil->jml }}
+                                                        </th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -383,6 +392,8 @@
         //     window.print()
         // });
     </script>
+
+    @include('akumulatif')
 
     @include('sumber_daya')
 
