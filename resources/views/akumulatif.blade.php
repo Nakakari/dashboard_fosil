@@ -1,5 +1,5 @@
  <script type="text/javascript">
-     var colors = ["#727cf5", "#6c757d", "#0acf97", "#fa5c7c", "#e3eaef"],
+     var colors = ["#0acf97", "#fa5c7c", "#e3eaef"],
          dataColors = $("#akumulatif").data("colors");
      dataColors && (colors = dataColors.split(","));
      var options = {
