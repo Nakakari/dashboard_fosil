@@ -1,5 +1,5 @@
  <script type="text/javascript">
-     var colors = ["#727cf5", "#6c757d", "#0acf97", "#fa5c7c", "#e3eaef"],
+     var colors = ["#01ffff, #fdfd01, #fe0000"],
          dataColors = $("#akumulatif").data("colors");
      dataColors && (colors = dataColors.split(","));
      var options = {
@@ -11,7 +11,7 @@
                  {{ $getCountSGD->jml }}, {{ $getCountBt->jml }}, {{ $getCountFosil->jml }}
              ],
              labels: [
-                 "SGD", "Batuan", "Fosil"
+                 "Sumber Daya Geologi", "Batuan", "Fosil"
              ],
              colors: colors,
              legend: {

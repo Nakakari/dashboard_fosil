@@ -44,8 +44,7 @@
                                 </div>
                                 <div class="row">
                                     <div dir="ltr" class="mb-3 col-6">
-                                        <div id="akumulatif" class="apex-charts"
-                                            data-colors="#F44336,#E91E63,#9C27B0,#5C6BC0,#03A9F4,#009688,#8BC34A,#FFEB3B,#FF5722,#795548,#9E9E9E,#263238">
+                                        <div id="akumulatif" class="apex-charts" data-colors="#01ffff,#fdfd01,#fe0000">
                                         </div>
                                     </div>
                                     <div class="col-6">

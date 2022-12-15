@@ -1,28 +1,3 @@
- {{-- Vertebrata --}}
- {{-- options = {
- chart: {
- type: 'bar'
- },
- plotOptions: {
- bar: {
- horizontal: true
- }
- },
- series: [{
- data: [
- @foreach ($x->get_SubJenis as $isi)
-     {
-     x: '{{ $isi->sub_jenis_koleksi }}',
-     y: '{{ count($isi->get_Fosil->where('sub_jenis_koleksi', $isi->sub_jenis_koleksi)) }}'
-     },
- @endforeach
- ]
- }]
- }
- var chart = new ApexCharts(document.querySelector("#basic-bar-{{ $x->jenis_koleksi }}"), options);
-
- chart.render(); --}}
-
  <script type="text/javascript">
      var colors = ["#727cf5", "#6c757d", "#0acf97", "#fa5c7c", "#e3eaef"],
          dataColors = $("#simple-pie-{{ $x->jenis_koleksi }}").data("colors");
